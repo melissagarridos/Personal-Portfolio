@@ -3,102 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Frieren: Beyond Journey's End</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="header">
-        <a href="https://github.com/melissagarridos" id="github">github</a>
-        <a href="https://www.linkedin.com/in/melissavgs/" id="linkedin">LinkedIn</a>
 
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-left">
+            <button id="toggleBtn" onclick="toggleSidebar()">☰</button>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d5/S%C5%8Ds%C5%8D_no_Frieren_logo.png" 
+                class="logo"
+                alt="Frieren logo"
+            >
+        </div>
+
+        <a 
+            class="watchbtn" 
+            href="https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end" 
+            target="_blank">
+            ▶ Watch here
+        </a>
     </header>
 
-    <section class="layout">
+    <div class="page-wrapper">
 
-        <section class="grid1">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li>Home</li>
+                <li>Characters</li>
+                <li>Missions</li>
+            </ul>
+        </aside>
 
-            <section id="inicio">
-                <p id="presentacion">Hola 👋  Soy Melissa Garrido, Software Developer en formación 👩‍💻 </p>
+        <!-- MAIN CONTENT -->
+        <main class="content">
+
+            <section class="layout" id="layout">
+
+                <!-- CAROUSEL -->
+                <div class="carousel-wrapper">
+
+                    <button class="btn prev" id="prevBtn">&#8592;</button>
+
+                    <div class="carrousel-track" id="track">
+
+                        <!-- CARD 1 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/frieren.jpeg" alt="Frieren">
+                            </div>
+                            <section>
+                                <h1>Frieren</h1>
+                                <p>Ancient elven mage, calm and introspective. She has a distant perception of time and human emotions.</p>
+                                <div class="skills">
+                                    <span class="tag">Magic</span>
+                                    <span class="tag">Analysis</span>
+                                    <span class="tag">Precision</span>
+                                    <span class="tag">Knowledge</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 2 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/fern.jpeg" alt="Fern">
+                            </div>
+                            <section>
+                                <h1>Fern</h1>
+                                <p>Serious and disciplined human apprentice. Raised with strict values and a strong sense of duty. Acts as Frieren's emotional balance.</p>
+                                <div class="skills">
+                                    <span class="tag">Speed</span>
+                                    <span class="tag">Focus</span>
+                                    <span class="tag">Precision</span>
+                                    <span class="tag">Range</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 3 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/stark.jpeg" alt="Stark">
+                            </div>
+                            <section>
+                                <h1>Stark</h1>
+                                <p>Strong but somewhat timid human warrior. Kind-hearted and deeply loyal to his companions. Provides physical strength to the team.</p>
+                                <div class="skills">
+                                    <span class="tag">Strength</span>
+                                    <span class="tag">Endurance</span>
+                                    <span class="tag">Combat</span>
+                                    <span class="tag">Instinct</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 4 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/Himmel.jpeg" alt="Himmel">
+                            </div>
+                            <section>
+                                <h1>Himmel</h1>
+                                <p>Hero of the Hero Party. With the help of Priest Heiter, Mage Frieren, and Warrior Eisen. He defeated the Demon King.</p>
+                                <div class="skills">
+                                    <span class="tag">Swordsmanship</span>
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Charisma</span>
+                                    <span class="tag">Instinct</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 5 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/eisen.jpeg" alt="Eisen">
+                            </div>
+                            <section>
+                                <h1>Eisen</h1>
+                                <p>Dwarf warrior with incredible endurance and unmatched defensive strength.</p>
+                                <div class="skills">
+                                    <span class="tag">Defense</span>
+                                    <span class="tag">Endurance</span>
+                                    <span class="tag">Combat</span>
+                                    <span class="tag">Resilience</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 6 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/heiter.jpeg" alt="Heiter">
+                            </div>
+                            <section>
+                                <h1>Heiter</h1>
+                                <p>Relaxed priest with powerful healing magic and a carefree attitude.</p>
+                                <div class="skills">
+                                    <span class="tag">Healing Magic</span>
+                                    <span class="tag">Support</span>
+                                    <span class="tag">Faith</span>
+                                    <span class="tag">Survival</span>
+                                </div>
+                            </section>
+                        </article>
+
+                        <!-- CARD 7 -->
+                        <article class="card">
+                            <div class="photo">
+                                <img src="photos/serie.jpeg" alt="Serie">
+                            </div>
+                            <section>
+                                <h1>Serie</h1>
+                                <p>Legendary mage with vast knowledge and a cold, calculating personality.</p>
+                                <div class="skills">
+                                    <span class="tag">Ancient Magic</span>
+                                    <span class="tag">Knowledge</span>
+                                    <span class="tag">Strategy</span>
+                                    <span class="tag">Mana Mastery</span>
+                                </div>
+                            </section>
+                        </article>
+
+                    </div><!-- /carrousel-track -->
+
+                    <button class="btn next" id="nextBtn">&#8594;</button>
+
+                </div><!-- /carousel-wrapper -->
+            
             </section>
-        </section>
 
-        <section id="container" class="grid2">
-        
-            <div class="tarjeta">
-                <img id="foto1" class="foto" src="https://www.opstechsolution.com/assets/images/about/web-design.png">
-            </div>
+        </main>
 
-            <div class="tarjeta">
-                <img id="foto2" class="foto" src="https://media.licdn.com/dms/image/v2/D4E03AQF5n3IkqnI75g/profile-displayphoto-crop_800_800/B4EZnDzdpVIMAI-/0/1759926672415?e=1777507200&v=beta&t=p7f-b-WOZHny5On3AoYqKuNI0qDju6jweB8Dt9uaww8">
-            </div>
+    </div><!-- /page-wrapper -->
 
-            <section class="skills-cards">
-                <p>The most recent brands I happily worked with</p>
-            </section>
-
-            <section id="skills">
-                    <i class="fa-brands fa-python"></i>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-solid fa-file-excel"></i>
-            </section>
-
-        </section>
-
-    </section>
-
-    <section class="footer">
-
-            <nav id="menu"> 
-                <section>
-                    </ul>
-                    <p>Contacto</p>
-                    <form action="/enviar" method="post">
-                        
-                        <label for="nombre">Nombre</label>
-                        <input type="text"
-                            id="nombre"
-                            name="nombre"
-                            placeholder="Tu nombre"
-                            required
-                            minlength="2"
-                            maxlength="50">
-
-                        <label for="ciudad">Ciudad</label>
-                        <select id="ciudad" name="ciudad" required>
-                            <option value="">Selecciona...</option>
-                            <option value="bog">Bogotá</option>
-                            <option value="med">Medellín</option>
-                            <option value="baq">Barranquilla</option>
-                        </select>
-                        
-                        <label for="email">Email</label>
-                        <input type="email"
-                            id="email"
-                            name="email"
-                            placeholder="tu@email.com"
-                            required>
-
-                        <label for="telefono">Número de contacto</label>
-                        <input type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="Ej: 3001234567"
-                            required>
-
-                        <button type="submit">Enviar formulario</button>
-
-                    </form>
-                    <a href="mascotas.html">
-                        <button id="btn_mascotas">Mascotas</button>
-                    </a>
-
-                </section>
-            </nav>
-    </section> 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
