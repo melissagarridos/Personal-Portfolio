@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Melissa Garrido</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    <header class="header">
+        <a href="index.html" class="headerbtn">Home</a>
+        <a href="about.html" class="headerbtn">About</a>
+        <a href="projects.html" class="headerbtn active">Projects</a>
+        <a href="experience.html" class="headerbtn">Experience</a>
+        <a href="contact.html" class="headerbtn">Contact</a>
+    </header>
+
+    <main class="projects-page">
+
+        <!-- ── Page Title ── -->
+        <section class="projects-hero">
+            <h1 class="title">Projects<span class="highlight">.</span></h1>
+            <p class="projects-subtitle">A selection of work spanning data analytics, automation, and web development.</p>
+        </section>
+
+        <!-- ── Featured Projects ── -->
+        <section class="projects-section">
+            <h2 class="section-label"><span class="highlight">★</span> Featured</h2>
+
+            <div class="featured-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card featured-card">
+                    <div class="project-card-header">
+                        <div class="project-screenshot placeholder-screenshot">
+                            <i class="fa-solid fa-chart-line placeholder-icon"></i>
+                            <span class="placeholder-label">Dashboard Preview</span>
+                        </div>
+                        <span class="project-badge">Power BI · SQL · Excel</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Walmart Fulfillment Incident Dashboard</h3>
+                        <p class="project-description">
+                            End-to-end BI dashboard tracking shipment delays, escalation trends,
+                            and resolution times across WFS operations. Reduced manual reporting
+                            time by automating KPI extraction from raw Excel exports into a live
+                            Power BI model.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Tracked 500+ weekly incidents with real-time KPIs</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Identified top delay causes, cutting escalations by ~20%</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Automated weekly report generation, saving 3 hrs/week</li>
+                        </ul>
+                        <div class="project-steps">
+                            <span class="step">Problem</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Data Cleaning</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Dashboard Design</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Insights</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card featured-card">
+                    <div class="project-card-header">
+                        <div class="project-screenshot placeholder-screenshot">
+                            <i class="fa-brands fa-python placeholder-icon"></i>
+                            <span class="placeholder-label">Script Preview</span>
+                        </div>
+                        <span class="project-badge">Python · Pandas · SMTP · OpenPyXL</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Settlement Report Automation Tool</h3>
+                        <p class="project-description">
+                            Python script that reads raw settlement spreadsheets, validates
+                            data integrity, generates formatted PDF reports, and dispatches
+                            them via email — fully replacing a manual weekly workflow.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Processes 1,000+ rows per report in under 10 seconds</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Catches data anomalies before reports reach stakeholders</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Eliminated manual report building entirely</li>
+                        </ul>
+                        <div class="project-steps">
+                            <span class="step">Read Sheets</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Validate</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Generate Report</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Auto-send</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card featured-card">
+                    <div class="project-card-header">
+                        <div class="project-screenshot placeholder-screenshot">
+                            <i class="fa-solid fa-laptop-code placeholder-icon"></i>
+                            <span class="placeholder-label">App Preview</span>
+                        </div>
+                        <span class="project-badge">HTML · CSS · JavaScript</span>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Developer Portfolio — This Site</h3>
+                        <p class="project-description">
+                            Fully hand-coded responsive portfolio with multi-page navigation,
+                            CSS animations, flip-card UI, contact form, and mobile-first layout.
+                            No frameworks — pure HTML, CSS, and JavaScript.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Responsive across all screen sizes</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Custom flip-card animations and CTA flow</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Clean component architecture across 5 pages</li>
+                        </ul>
+                        <div class="project-steps">
+                            <span class="step">Design</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Build</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Responsive</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Deploy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ── By Category ── -->
+        <section class="projects-section">
+            <h2 class="section-label">By Category</h2>
+
+            <div class="category-tabs">
+                <button class="cat-tab active" data-filter="all">All</button>
+                <button class="cat-tab" data-filter="data">Data Analytics</button>
+                <button class="cat-tab" data-filter="dev">Software Dev</button>
+                <button class="cat-tab" data-filter="automation">Automation</button>
+            </div>
+
+            <div class="mini-projects-grid" id="mini-grid">
+
+                <article class="mini-card" data-category="data">
+                    <div class="mini-card-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                    <div class="mini-card-body">
+                        <h4>WFS Incident Tracker — Power BI</h4>
+                        <p>KPI dashboard for fulfillment incident management.</p>
+                        <div class="mini-tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <article class="mini-card" data-category="data">
+                    <div class="mini-card-icon"><i class="fa-solid fa-file-excel"></i></div>
+                    <div class="mini-card-body">
+                        <h4>Loan Amortization Calculator</h4>
+                        <p>Excel model with payment simulation, charts, and interest analysis.</p>
+                        <div class="mini-tags"><span>Excel</span><span>Formulas</span><span>Charts</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <article class="mini-card" data-category="dev">
+                    <div class="mini-card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="mini-card-body">
+                        <h4>Task Manager Web App</h4>
+                        <p>Filterable task tracker with local storage and clean UI.</p>
+                        <div class="mini-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <article class="mini-card" data-category="automation">
+                    <div class="mini-card-icon"><i class="fa-brands fa-python"></i></div>
+                    <div class="mini-card-body">
+                        <h4>Email Report Dispatcher</h4>
+                        <p>Python script that generates and emails weekly summary reports.</p>
+                        <div class="mini-tags"><span>Python</span><span>SMTP</span><span>Pandas</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <article class="mini-card" data-category="automation">
+                    <div class="mini-card-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="mini-card-body">
+                        <h4>Google Sheets Automation</h4>
+                        <p>Apps Script tools for auto-formatting and data validation workflows.</p>
+                        <div class="mini-tags"><span>Google Apps Script</span><span>JS</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <article class="mini-card" data-category="dev">
+                    <div class="mini-card-icon"><i class="fa-solid fa-database"></i></div>
+                    <div class="mini-card-body">
+                        <h4>SQL Sales Analysis</h4>
+                        <p>Query set analyzing sales trends, cohorts, and product performance.</p>
+                        <div class="mini-tags"><span>SQL</span><span>Data Analysis</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script>
+        // Category filter
+        const tabs = document.querySelectorAll('.cat-tab');
+        const cards = document.querySelectorAll('.mini-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                cards.forEach(card => {
+                    card.style.display =
+                        filter === 'all' || card.dataset.category === filter
+                            ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

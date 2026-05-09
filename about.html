@@ -3,48 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About — Melissa Garrido</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="aboutmepage">
+<body>
+
 
     <header class="header">
-
-        <a href="index.html" id="home" >Home</a>
-        <a href="https://github.com/melissagarridos?tab=repositories" id="projects">Projects</a>
-        <a href="about.html" id="about" class="active">About</a>
-        <a href="pets.html" id="pets">Pets</a>
-        <a href="contact.html" id="get-in-touch">Contact</a>
-        <a href="https://www.linkedin.com/in/melissavgs/" id="linkedin">LinkedIn</a>
-        
+        <a href="index.html" class="headerbtn">Home</a>
+        <a href="about.html" class="active headerbtn">About</a>
+        <a href="projects.html" class="headerbtn">Projects</a>
+        <a href="experience.html" class="headerbtn">Experience</a>
+        <a href="contact.html" class="headerbtn">Contact</a>
     </header>
 
+    <main class="about-page">
 
-    <section class="centertitle" id="aboutme">
-        <span id="centertitle">About Me<span id="highlight">.</span>
-    </section>
+        <!-- ── Page Title ── -->
+        <section class="about-hero">
+            <h1 class="title">About Me<span class="highlight">.</span></h1>
+        </section>
 
-    <section id="abouttxt">
-        <div id="aboutbox"></div>
-        <div id="descriptiontxt">Developer-oriented professional with experience in operations at Sellcord, focused on data-driven solutions, process optimization, and building efficient systems.
-    
-        </div>
-        <div class="techtools">
-            <span id="tech-title">Tools & Technologies</span>
+        <!-- ── Bio + Photo ── -->
+        <section class="about-bio-grid">
+            <div class="about-bio-text">
+                <p>
+                    I'm a technical analyst focused on automation, business intelligence, and software development.
+                </p>
+                <p>
+                    My background combines operational problem-solving with technical tools such as Python, Power BI, JavaScript, SQL, Excel, HTML, and CSS. I enjoy building systems that improve workflows, reduce manual effort, and turn data into actionable insights.
+                </p>
+            </div>
+            <div class="about-photo">
+                <img src="Assets/coding.jpg" alt="Melissa at work" id="photo-code">
+            </div>
+        </section>
 
-            <ul id="tools">
-                <li>Git & GitHub 🌿</li>
-                <li>VS Code</li>
-                <li>Power BI (data modeling & reporting)</li>
-                <li>Excel (advanced formulas & automation)</li>
-            </ul>
-        </div>
-    </section>
-    <section id="tech-section">
-        <div>
-            <img src="code.jpg" id="photo-code">
-        </div>
-    </section>
-<script src="index.js"></script> 
+        <!-- ── Skills ── -->
+        <section class="about-skills">
+            <h2 class="about-skills-title">Skills<span class="highlight">.</span></h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">
+                        <i class="fa-solid fa-code"></i> Languages
+                    </h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">
+                        <i class="fa-brands fa-html5"></i> Frontend
+                    </h3>
+                    <ul class="skill-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">
+                        <i class="fa-solid fa-chart-bar"></i> Data &amp; BI
+                    </h3>
+                    <ul class="skill-list">
+                        <li>Power BI</li>
+                        <li>Excel</li>
+                        <li>Pandas</li>
+                        <li>Data Cleaning</li>
+                        <li>Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">
+                        <i class="fa-solid fa-wrench"></i> Tools
+                    </h3>
+                    <ul class="skill-list">
+                        <li>Git &amp; GitHub</li>
+                        <li>VS Code</li>
+                        <li>Google Apps Script</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">
+                        <i class="fa-solid fa-briefcase"></i> Business / Operations
+                    </h3>
+                    <ul class="skill-list">
+                        <li>Process Optimization</li>
+                        <li>Incident Tracking</li>
+                        <li>WFS Audits</li>
+                        <li>Escalation Management</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
