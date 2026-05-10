@@ -9,105 +9,234 @@
 </head>
 <body>
 
-
+    <!-- HEADER -->
     <header class="header">
-        <a href="index.html" class="headerbtn">Home</a>
-        <a href="about.html" class="active headerbtn">About</a>
-        <a href="projects.html" class="headerbtn">Projects</a>
-        <a href="experience.html" class="headerbtn">Experience</a>
-        <a href="contact.html" class="headerbtn">Contact</a>
-    </header>
 
+        <a href="index.html" class="headerbtn" data-en="Home" data-es="Inicio">
+            Home
+        </a>
+
+        <a href="about.html" class="headerbtn active" data-en="About Me" data-es="Sobre mí">
+            About Me
+        </a>
+
+        <a href="projects.html" class="headerbtn" data-en="Projects" data-es="Proyectos">
+            Projects
+        </a>
+
+        <a href="experience.html" class="headerbtn" data-en="Experience" data-es="Experiencia">
+            Experience
+        </a>
+
+        <a href="contact.html" class="headerbtn" data-en="Contact" data-es="Contacto">
+            Contact
+        </a>
+
+        <button id="lang-toggle" class="lang-btn">
+            ES
+        </button>
+
+    </header>
+    
     <main class="about-page">
 
         <!-- ── Page Title ── -->
         <section class="about-hero">
-            <h1 class="title">About Me<span class="highlight">.</span></h1>
+
+            <h1 
+                class="title"
+                data-en="About Me<span class='highlight'>.</span>"
+                data-es="Sobre mí<span class='highlight'>.</span>"
+            >
+                About Me<span class="highlight">.</span>
+            </h1>
+
         </section>
 
         <!-- ── Bio + Photo ── -->
         <section class="about-bio-grid">
+
             <div class="about-bio-text">
-                <p>
+
+                <p
+                    data-en="I'm a technical analyst focused on automation, business intelligence, and software development."
+                    data-es="Soy una analista técnica enfocada en automatización, inteligencia de negocios y desarrollo de software."
+                >
                     I'm a technical analyst focused on automation, business intelligence, and software development.
                 </p>
-                <p>
+
+                <p
+                    data-en="My background combines operational problem-solving with technical tools such as Python, Power BI, JavaScript, SQL, Excel, HTML, and CSS. I enjoy building systems that improve workflows, reduce manual effort, and turn data into actionable insights."
+                    data-es="Mi experiencia combina resolución de problemas operativos con herramientas técnicas como Python, Power BI, JavaScript, SQL, Excel, HTML y CSS. Disfruto construir sistemas que mejoren flujos de trabajo, reduzcan tareas manuales y conviertan datos en información útil."
+                >
                     My background combines operational problem-solving with technical tools such as Python, Power BI, JavaScript, SQL, Excel, HTML, and CSS. I enjoy building systems that improve workflows, reduce manual effort, and turn data into actionable insights.
                 </p>
+
             </div>
+
             <div class="about-photo">
+
                 <img src="Assets/coding.jpg" alt="Melissa at work" id="photo-code">
+
             </div>
+
         </section>
 
         <!-- ── Skills ── -->
         <section class="about-skills">
-            <h2 class="about-skills-title">Skills<span class="highlight">.</span></h2>
+
+            <h2 
+                class="about-skills-title"
+                data-en="Skills<span class='highlight'>.</span>"
+                data-es="Habilidades<span class='highlight'>.</span>"
+            >
+                Skills<span class="highlight">.</span>
+            </h2>
 
             <div class="skills-grid">
 
                 <div class="skill-category">
-                    <h3 class="skill-cat-title">
+
+                    <h3 
+                        class="skill-cat-title"
+                        data-en="<i class='fa-solid fa-code'></i> Languages"
+                        data-es="<i class='fa-solid fa-code'></i> Lenguajes"
+                    >
                         <i class="fa-solid fa-code"></i> Languages
                     </h3>
+
                     <ul class="skill-list">
                         <li>Python</li>
                         <li>JavaScript</li>
                         <li>SQL</li>
                     </ul>
+
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-cat-title">
+
+                    <h3 
+                        class="skill-cat-title"
+                        data-en="<i class='fa-brands fa-html5'></i> Frontend"
+                        data-es="<i class='fa-brands fa-html5'></i> Frontend"
+                    >
                         <i class="fa-brands fa-html5"></i> Frontend
                     </h3>
+
                     <ul class="skill-list">
                         <li>HTML</li>
                         <li>CSS</li>
                     </ul>
+
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-cat-title">
+
+                    <h3 
+                        class="skill-cat-title"
+                        data-en="<i class='fa-solid fa-chart-bar'></i> Data &amp; BI"
+                        data-es="<i class='fa-solid fa-chart-bar'></i> Datos &amp; BI"
+                    >
                         <i class="fa-solid fa-chart-bar"></i> Data &amp; BI
                     </h3>
+
                     <ul class="skill-list">
+
                         <li>Power BI</li>
                         <li>Excel</li>
                         <li>Pandas</li>
-                        <li>Data Cleaning</li>
-                        <li>Reporting</li>
+
+                        <li
+                            data-en="Data Cleaning"
+                            data-es="Limpieza de Datos"
+                        >
+                            Data Cleaning
+                        </li>
+
+                        <li
+                            data-en="Reporting"
+                            data-es="Reportes"
+                        >
+                            Reporting
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-cat-title">
+
+                    <h3 
+                        class="skill-cat-title"
+                        data-en="<i class='fa-solid fa-wrench'></i> Tools"
+                        data-es="<i class='fa-solid fa-wrench'></i> Herramientas"
+                    >
                         <i class="fa-solid fa-wrench"></i> Tools
                     </h3>
+
                     <ul class="skill-list">
+
                         <li>Git &amp; GitHub</li>
                         <li>VS Code</li>
-                        <li>Google Apps Script</li>
+
+                        <li
+                            data-en="Google Apps Script"
+                            data-es="Google Apps Script"
+                        >
+                            Google Apps Script
+                        </li>
+
                     </ul>
+
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-cat-title">
+
+                    <h3 
+                        class="skill-cat-title"
+                        data-en="<i class='fa-solid fa-briefcase'></i> Business / Operations"
+                        data-es="<i class='fa-solid fa-briefcase'></i> Negocios / Operaciones"
+                    >
                         <i class="fa-solid fa-briefcase"></i> Business / Operations
                     </h3>
+
                     <ul class="skill-list">
-                        <li>Process Optimization</li>
-                        <li>Incident Tracking</li>
+
+                        <li
+                            data-en="Process Optimization"
+                            data-es="Optimización de Procesos"
+                        >
+                            Process Optimization
+                        </li>
+
+                        <li
+                            data-en="Incident Tracking"
+                            data-es="Seguimiento de Incidentes"
+                        >
+                            Incident Tracking
+                        </li>
+
                         <li>WFS Audits</li>
-                        <li>Escalation Management</li>
+
+                        <li
+                            data-en="Escalation Management"
+                            data-es="Gestión de Escalaciones"
+                        >
+                            Escalation Management
+                        </li>
+
                     </ul>
+
                 </div>
 
             </div>
+
         </section>
 
     </main>
 
+
     <script src="index.js"></script>
+
 </body>
 </html>

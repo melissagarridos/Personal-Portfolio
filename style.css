@@ -74,12 +74,27 @@ body {
   color: var(--primary-light);
 }
 
-/* NOTE: in your HTML, merge the two class attributes on the Home link:
-   class="headerbtn active"  — the second class= overwrites the first */
 .headerbtn.active {
   font-weight: 600;
   color: var(--text);
   border-bottom: 2px solid var(--primary);
+}
+
+.lang-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.lang-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
 }
 
 
@@ -95,16 +110,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
   padding: 60px 40px 60px 50px;
 }
 
 .presentation {
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.center-subtitle {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-title {
-  font-size: clamp(2.2rem, 5vw, 62px);
+  font-size: clamp(2rem, 4vw, 62px);
   font-weight: bold;
   line-height: 1.05;
   text-shadow: var(--text-shadow);
@@ -116,7 +138,7 @@ body {
 }
 
 .index-description {
-  font-size: 18px;
+  font-size: 12px;
   color: var(--text);
   max-width: 520px;
 }
@@ -128,7 +150,7 @@ body {
 }
 
 .skills {
-  font-size: 40px;
+  font-size: 20px;
   text-shadow: var(--text-shadow);
   transition: transform 0.2s ease;
 }
@@ -150,9 +172,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 22px;
+  padding: 10px 10px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -799,6 +821,23 @@ textarea:focus {
 .home-project-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  max-height: 240px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.03);
 }
 
 .hpc-top {
@@ -1576,5 +1615,170 @@ textarea:focus {
   .home-cert-pill {
     font-size: 0.8rem;
     padding: 8px 14px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   SUBTLE PORTFOLIO ANIMATIONS
+   Replace ONLY animation-related sections with this
+   ══════════════════════════════════════════════════════ */
+
+/* ─── Smooth Page Fade ─────────────────────────────── */
+body {
+  animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─── Gentle Upward Entrance Animation ────────────── */
+.personal-information,
+.photo,
+.home-project-card,
+.project-card,
+.mini-card,
+.skill-category,
+.cert-card,
+.learning-item,
+.exp-snapshot,
+.timeline-item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Staggered entrance */
+.photo {
+  animation-delay: 0.1s;
+}
+
+.home-project-card:nth-child(1),
+.project-card:nth-child(1),
+.mini-card:nth-child(1),
+.skill-category:nth-child(1),
+.cert-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.home-project-card:nth-child(2),
+.project-card:nth-child(2),
+.mini-card:nth-child(2),
+.skill-category:nth-child(2),
+.cert-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.home-project-card:nth-child(3),
+.project-card:nth-child(3),
+.mini-card:nth-child(3),
+.skill-category:nth-child(3),
+.cert-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.home-project-card:nth-child(4),
+.project-card:nth-child(4),
+.mini-card:nth-child(4),
+.timeline-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Softer Hover Animations ─────────────────────── */
+.skills,
+.cta-btn,
+.home-project-card,
+.project-card,
+.mini-card,
+.skill-category,
+.cert-card,
+.learning-item,
+.photo img,
+.project-image {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Gentle hover lift */
+.home-project-card:hover,
+.project-card:hover,
+.mini-card:hover,
+.skill-category:hover,
+.cert-card:hover,
+.learning-item:hover,
+.photo img:hover {
+  transform: translateY(-6px);
+}
+
+/* Skill icon floating */
+.skills:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Buttons */
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Project image subtle zoom */
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+/* ─── Floating Profile Image ──────────────────────── */
+.photo img {
+  animation:
+    fadeUp 1s ease forwards,
+    floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ─── Smooth Scroll ───────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── Reduce Motion Accessibility ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

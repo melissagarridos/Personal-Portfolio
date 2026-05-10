@@ -1,50 +1,81 @@
-const form = document.getElementById('contactForm');
+
+        const toggleBtn = document.getElementById("lang-toggle");
+
+        let currentLang = "en";
+
+        toggleBtn.addEventListener("click", () => {
+
+            currentLang = currentLang === "en" ? "es" : "en";
+
+            document.querySelectorAll("[data-en]").forEach((element) => {
+                element.innerHTML = element.dataset[currentLang];
+            });
+
+            toggleBtn.textContent = currentLang === "en"
+                ? "ES"
+                : "EN";
+        });
+
+        // Category filter
+        const tabs = document.querySelectorAll('.cat-tab');
+        const cards = document.querySelectorAll('.mini-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                cards.forEach(card => {
+                    card.style.display =
+                        filter === 'all' || card.dataset.category === filter
+                            ? 'flex' : 'none';
+                });
+            });
+        });
+
+
+// Contact Form
+
+const form = document.getElementById("contactForm");
+const successMsg = document.getElementById("successMsg");
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbz-LG_7gtFc_Lunz6OhHVeKddhG1nbX93opE8HXO9PBo__7tTfZN35fKYC3L_y8yTucxA/exec";
 
 if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener("submit", async (e) => {
+
         e.preventDefault();
 
-        const name = this.name.value;
-        const email = this.email.value;
-        const phone = this.phone.value;
-        const message = this.message.value;
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            message: document.getElementById("message").value
+        };
 
-        // Validación básica
-        if (!name || !email) {
-            alert("Please fill required fields");
-            return;
+        try {
+
+            await fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            successMsg.style.display = "block";
+
+            form.reset();
+
+        } catch (error) {
+
+            console.error(error);
+
+            alert("Error sending message.");
+
         }
 
-        // Contenido del archivo TXT
-        const content = 
-`----- NEW CONTACT -----
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Message: ${message}
-Date: ${new Date().toLocaleString()}
-
-`;
-
-        // Crear archivo
-        const blob = new Blob([content], { type: "text/plain;charset=utf-8;" });
-        const url = URL.createObjectURL(blob);
-
-        // Descargar archivo
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = `contact_${Date.now()}.txt`;
-        a.click();
-
-        URL.revokeObjectURL(url);
-
-        // UI feedback
-        const btn = this.querySelector('button[type="submit"]');
-        btn.textContent = "Saved ✓";
-        btn.disabled = true;
-
-        document.getElementById('successMsg').style.display = 'block';
-
-        this.reset();
     });
 }

@@ -1,152 +1,643 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melissa Garrido - Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 </head>
+
 <body>
 
-
+    <!-- HEADER -->
     <header class="header">
-        <a href="index.html" class="headerbtn active">Home</a>
-        <a href="about.html" class="headerbtn">About</a>
-        <a href="projects.html" class="headerbtn">Projects</a>
-        <a href="experience.html" class="headerbtn">Experience</a>
-        <a href="contact.html" class="headerbtn">Contact</a>
+
+        <a href="index.html" class="headerbtn active" data-en="Home" data-es="Inicio">Home</a>
+
+        <a href="about.html" class="headerbtn" data-en="About Me" data-es="Sobre mí">
+            About Me
+        </a>
+
+        <a href="projects.html" class="headerbtn" data-en="Projects" data-es="Proyectos">
+            Projects
+        </a>
+
+        <a href="experience.html" class="headerbtn" data-en="Experience" data-es="Experiencia">
+            Experience
+        </a>
+
+        <a href="contact.html" class="headerbtn" data-en="Contact" data-es="Contacto">
+            Contact
+        </a>
+
+
+        <button id="lang-toggle" class="lang-btn">
+            ES
+        </button>
+
     </header>
 
     <!-- HERO -->
     <div class="layout">
+
         <section class="personal-information">
-            <span class="presentation">Hey, I'm Melissa Garrido 👋🏻</span>
+
+            <span
+                class="presentation"
+                data-en="Hey, I'm Melissa Garrido 👋🏻"
+                data-es="Hola, soy Melissa Garrido 👋🏻"
+            >
+                Hey, I'm Melissa Garrido 👋🏻
+            </span>
+
             <span class="main-title">
-                <span class="highlight">Business Intelligence</span><br>
-                &amp; Software Development
+
+                <span
+                    class="highlight"
+                    data-en="Business Intelligence"
+                    data-es="Inteligencia de Negocios"
+                >
+                    Business Intelligence
+                </span>
+
+                <br>
+
+                <span
+                    data-en="& Software Development"
+                    data-es="y Desarrollo de Software"
+                >
+                    &amp; Software Development
+                </span>
+
             </span>
-            <span class="index-description">
-                Specialized in Python automation, Power BI dashboards, SQL analytics,
-                JavaScript web applications, and operational process optimization.
+
+            <span
+                class="index-description"
+                data-en="Software Developer and Data Analyst based in Colombia, specialized in Python automation, Power BI dashboards, SQL analytics, JavaScript web applications, and operational process optimization. Focused on building scalable systems, analytics solutions, and modern digital experiences."
+                data-es="Desarrolladora de Software y Analista de Datos en Colombia, especializada en automatización con Python, dashboards en Power BI, análisis SQL, aplicaciones web con JavaScript y optimización de procesos operativos. Enfocada en construir sistemas escalables, soluciones analíticas y experiencias digitales modernas."
+            >
+                Software Developer and Data Analyst based in Colombia,
+                specialized in Python automation, Power BI dashboards,
+                SQL analytics, JavaScript web applications, and operational
+                process optimization. Focused on building scalable systems,
+                analytics solutions, and modern digital experiences.
             </span>
+
+            <!-- SKILLS -->
             <div class="skill-box">
-                <i class="skills fa-brands fa-python"></i>
-                <i class="skills fa-brands fa-html5"></i>
-                <i class="skills fa-brands fa-css3-alt"></i>
-                <i class="skills fa-brands fa-js"></i>
-                <i class="skills fa-solid fa-file-excel"></i>
-                <i class="skills fa-regular fa-chart-bar"></i>
-                <i class="skills fa-solid fa-database"></i>
+
+                <i
+                    class="skills fa-brands fa-python"
+                    title="Python"
+                ></i>
+
+                <i
+                    class="skills fa-brands fa-html5"
+                    title="HTML"
+                ></i>
+
+                <i
+                    class="skills fa-brands fa-css3-alt"
+                    title="CSS"
+                ></i>
+
+                <i
+                    class="skills fa-brands fa-js"
+                    title="JavaScript"
+                ></i>
+
+                <i
+                    class="skills fa-solid fa-file-excel"
+                    title="Excel"
+                ></i>
+
+                <i
+                    class="skills fa-solid fa-chart-column"
+                    title="Power BI"
+                ></i>
+
+                <i
+                    class="skills fa-solid fa-database"
+                    title="SQL"
+                ></i>
+
             </div>
+
+            <!-- BUTTONS -->
             <div class="buttons">
-                <a href="https://www.linkedin.com/in/melissavgs/" class="cta-btn filled" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+
+                <a
+                    href="contact.html"
+                    class="cta-btn filled"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span data-en="Contact" data-es="Contacto">
+                        Contact
+                    </span>
                 </a>
-                <a href="https://github.com/melissagarridos?tab=repositories" class="cta-btn outline" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> GitHub
+
+                <a
+                    href="https://www.linkedin.com/in/melissavgs/"
+                    class="cta-btn filled"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                    LinkedIn
                 </a>
-                <a href="#" class="cta-btn outline">
-                    <i class="fa-solid fa-file-pdf"></i> Resume
+
+                <a
+                    href="https://github.com/melissagarridos"
+                    class="cta-btn outline"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
                 </a>
+
+                <a
+                    href="Assets/Melissa_Garrido_CV.pdf"
+                    class="cta-btn outline"
+                    target="_blank"
+                >
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <span data-en="Resume" data-es="Hoja de Vida">
+                        Resume
+                    </span>
+                </a>
+
             </div>
+
         </section>
+
+        <!-- PHOTO -->
         <section class="photo">
-            <img src="Assets/IMG_1365.jpg" alt="Melissa Garrido">
+
+            <img
+                src="Assets/IMG_1365.jpg"
+                alt="Melissa Garrido"
+            >
+
         </section>
+
     </div>
 
     <!-- FEATURED PROJECTS -->
     <section class="home-section" id="home-projects">
+
         <div class="home-section-inner">
+
             <div class="home-section-header">
-                <h2 class="home-section-title">Featured Projects<span class="highlight">.</span></h2>
-                <a href="projects.html" class="section-link">View all <i class="fa-solid fa-arrow-right"></i></a>
+
+                <h2 class="home-section-title">
+
+                    <span
+                        data-en="Featured Projects"
+                        data-es="Proyectos Destacados"
+                    >
+                        Featured Projects
+                    </span>
+
+                    <span class="highlight">.</span>
+
+                </h2>
+
+                <a href="projects.html" class="section-link">
+
+                    <span
+                        data-en="View all"
+                        data-es="Ver todos"
+                    >
+                        View all
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
             </div>
+
             <div class="home-projects-grid">
 
+                <!-- SUSHI -->
                 <article class="home-project-card">
+
                     <div class="hpc-top">
-                        <div class="hpc-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <span class="hpc-badge">Data Analytics</span>
+
+                        <div class="hpc-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+
+                        <span
+                            class="hpc-badge"
+                            data-en="Frontend"
+                            data-es="Frontend"
+                        >
+                            Frontend
+                        </span>
+
                     </div>
-                    <h3 class="hpc-title">WFS Incident Dashboard</h3>
-                    <p class="hpc-desc">Power BI dashboard tracking shipment delays, KPIs, and escalation trends across Walmart fulfillment operations.</p>
-                    <div class="hpc-tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
-                    <a href="projects.html" class="hpc-link">See project <i class="fa-solid fa-arrow-right"></i></a>
+
+                    <h3
+                        class="hpc-title"
+                        data-en="Sushi Festival Landing Page"
+                        data-es="Landing Page Festival Sushi"
+                    >
+                        Sushi Festival Landing Page
+                    </h3>
+
+                    <p
+                        class="hpc-desc"
+                        data-en="Responsive landing page for a gastronomic event featuring modern UI design, interactive sections, and optimized user experience."
+                        data-es="Landing page responsiva para un evento gastronómico con diseño UI moderno, secciones interactivas y experiencia de usuario optimizada."
+                    >
+                        Responsive landing page for a gastronomic event
+                        featuring modern UI design, interactive sections,
+                        and optimized user experience.
+                    </p>
+
+                    <div class="hpc-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a
+                        href="https://festival-gastronomico-baq.netlify.app/"
+                        class="hpc-link"
+                        target="_blank"
+                    >
+
+                        <span
+                            data-en="Live project"
+                            data-es="Proyecto en vivo"
+                        >
+                            Live project
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
                 </article>
 
+                <!-- TERMINAL SOULS -->
                 <article class="home-project-card">
+
                     <div class="hpc-top">
-                        <div class="hpc-icon"><i class="fa-brands fa-python"></i></div>
-                        <span class="hpc-badge">Automation</span>
+
+                        <div class="hpc-icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+
+                        <span
+                            class="hpc-badge"
+                            data-en="Python"
+                            data-es="Python"
+                        >
+                            Python
+                        </span>
+
                     </div>
-                    <h3 class="hpc-title">Settlement Report Automation</h3>
-                    <p class="hpc-desc">Python tool that reads spreadsheets, validates data, generates reports, and emails them automatically.</p>
-                    <div class="hpc-tags"><span>Python</span><span>Pandas</span><span>SMTP</span></div>
-                    <a href="projects.html" class="hpc-link">See project <i class="fa-solid fa-arrow-right"></i></a>
+
+                    <h3
+                        class="hpc-title"
+                        data-en="Terminal Souls"
+                        data-es="Terminal Souls"
+                    >
+                        Terminal Souls
+                    </h3>
+
+                    <p
+                        class="hpc-desc"
+                        data-en="Terminal-based fighting game developed in Python with combat logic, gameplay rounds, and interactive CLI mechanics."
+                        data-es="Juego de peleas en terminal desarrollado en Python con lógica de combate, rondas de juego y mecánicas interactivas CLI."
+                    >
+                        Terminal-based fighting game developed in Python
+                        with combat logic, gameplay rounds, and
+                        interactive CLI mechanics.
+                    </p>
+
+                    <div class="hpc-tags">
+                        <span>Python</span>
+                        <span>Game Logic</span>
+                        <span>CLI</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/melissagarridos/Terminal-Souls"
+                        class="hpc-link"
+                        target="_blank"
+                    >
+
+                        <span
+                            data-en="See project"
+                            data-es="Ver proyecto"
+                        >
+                            See project
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
                 </article>
 
+                <!-- PORTFOLIO -->
                 <article class="home-project-card">
+
                     <div class="hpc-top">
-                        <div class="hpc-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <span class="hpc-badge">Frontend</span>
+
+                        <div class="hpc-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <span
+                            class="hpc-badge"
+                            data-en="Portfolio"
+                            data-es="Portafolio"
+                        >
+                            Portfolio
+                        </span>
+
                     </div>
-                    <h3 class="hpc-title">Developer Portfolio</h3>
-                    <p class="hpc-desc">Responsive, hand-coded portfolio with custom animations, multi-page routing, and mobile-first design. No frameworks.</p>
-                    <div class="hpc-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                    <a href="projects.html" class="hpc-link">See project <i class="fa-solid fa-arrow-right"></i></a>
+
+                    <h3
+                        class="hpc-title"
+                        data-en="Professional Portfolio Landing Page"
+                        data-es="Landing Page de Portafolio Profesional"
+                    >
+                        Professional Portfolio Landing Page
+                    </h3>
+
+                    <p
+                        class="hpc-desc"
+                        data-en="Multi-page responsive portfolio built with HTML, CSS, and JavaScript featuring custom UI components, animations, and mobile-first design."
+                        data-es="Portafolio responsivo multi página construido con HTML, CSS y JavaScript con componentes UI personalizados, animaciones y diseño mobile-first."
+                    >
+                        Multi-page responsive portfolio built with HTML,
+                        CSS, and JavaScript featuring custom UI components,
+                        animations, and mobile-first design.
+                    </p>
+
+                    <div class="hpc-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a
+                        href="projects.html"
+                        class="hpc-link"
+                    >
+
+                        <span
+                            data-en="See project"
+                            data-es="Ver proyecto"
+                        >
+                            See project
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
                 </article>
 
             </div>
+
         </div>
+
     </section>
 
-    <!-- EXPERIENCE SNAPSHOT -->
-    <section class="home-section home-section-alt" id="home-experience">
+    <!-- EXPERIENCE -->
+    <section
+        class="home-section home-section-alt"
+        id="home-experience"
+    >
+
         <div class="home-section-inner">
+
             <div class="home-section-header">
-                <h2 class="home-section-title">Experience<span class="highlight">.</span></h2>
-                <a href="experience.html" class="section-link">Full details <i class="fa-solid fa-arrow-right"></i></a>
+
+                <h2 class="home-section-title">
+
+                    <span
+                        data-en="Experience"
+                        data-es="Experiencia"
+                    >
+                        Experience
+                    </span>
+
+                    <span class="highlight">.</span>
+
+                </h2>
+
+                <a href="experience.html" class="section-link">
+
+                    <span
+                        data-en="Full details"
+                        data-es="Ver detalles"
+                    >
+                        Full details
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
             </div>
+
             <div class="exp-snapshot">
+
                 <div class="exp-snap-role">
-                    <span class="exp-snap-year">2023 — Present</span>
+
+                    <span
+                        class="exp-snap-year"
+                        data-en="Aug 2025 — Present"
+                        data-es="Ago 2025 — Actualidad"
+                    >
+                        Aug 2025 — Present
+                    </span>
+
                     <div class="exp-snap-info">
-                        <h3>Operations &amp; Technical Analyst</h3>
-                        <span class="exp-snap-company">Sellcord</span>
+
+                        <h3
+                            data-en="Case Manager & Operations Analyst"
+                            data-es="Case Manager y Analista de Operaciones"
+                        >
+                            Case Manager & Operations Analyst
+                        </h3>
+
+                        <span
+                            class="exp-snap-company"
+                            data-en="Sellcord · Remote"
+                            data-es="Sellcord · Remoto"
+                        >
+                            Sellcord · Remote
+                        </span>
+
                     </div>
+
                 </div>
+
                 <ul class="exp-snap-bullets">
-                    <li>Managed WFS audits and escalation workflows across fulfillment operations</li>
-                    <li>Built Power BI dashboards and reporting structures for incident tracking</li>
-                    <li>Automated recurring reports with Python, saving 3+ hours per week</li>
-                    <li>Analyzed shipment and settlement data to reduce operational delays</li>
+
+                    <li
+                        data-en="Managed Walmart Seller Center accounts and operational workflows"
+                        data-es="Gestioné cuentas de Walmart Seller Center y flujos operativos"
+                    >
+                        Managed Walmart Seller Center accounts
+                        and operational workflows
+                    </li>
+
+                    <li
+                        data-en="Contributed to reimbursement processes exceeding USD 250K"
+                        data-es="Contribuí a procesos de reembolsos superiores a USD 250K"
+                    >
+                        Contributed to reimbursement processes
+                        exceeding USD 250K
+                    </li>
+
+                    <li
+                        data-en="Built operational reports and KPI tracking systems using Excel and analytics tools"
+                        data-es="Desarrollé reportes operativos y sistemas de seguimiento KPI usando Excel y herramientas analíticas"
+                    >
+                        Built operational reports and KPI tracking
+                        systems using Excel and analytics tools
+                    </li>
+
+                    <li
+                        data-en="Supported escalation management, shipment investigations, and workflow optimization"
+                        data-es="Apoyé gestión de escalaciones, investigaciones de envíos y optimización de procesos"
+                    >
+                        Supported escalation management,
+                        shipment investigations, and workflow optimization
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- LEARNING / CERTS SNAPSHOT -->
+    <!-- CERTIFICATIONS -->
     <section class="home-section" id="home-certs">
+
         <div class="home-section-inner">
+
             <div class="home-section-header">
-                <h2 class="home-section-title">Learning<span class="highlight">.</span></h2>
-                <a href="experience.html" class="section-link">All certs <i class="fa-solid fa-arrow-right"></i></a>
+
+                <h2 class="home-section-title">
+
+                    <span
+                        data-en="Learning"
+                        data-es="Aprendizaje"
+                    >
+                        Learning
+                    </span>
+
+                    <span class="highlight">.</span>
+
+                </h2>
+
+                <a href="experience.html" class="section-link">
+
+                    <span
+                        data-en="All certs"
+                        data-es="Todas las certificaciones"
+                    >
+                        All certs
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
             </div>
+
             <div class="home-certs-row">
-                <div class="home-cert-pill"><i class="fa-brands fa-google"></i> Google Data Analytics</div>
-                <div class="home-cert-pill"><i class="fa-solid fa-chart-bar"></i> Microsoft Power BI</div>
-                <div class="home-cert-pill"><i class="fa-brands fa-free-code-camp"></i> freeCodeCamp — Web Design</div>
-                <div class="home-cert-pill"><i class="fa-brands fa-python"></i> Python for Everybody</div>
+
+                <div
+                    class="home-cert-pill"
+                    data-en="Artificial Intelligence Bootcamp"
+                    data-es="Bootcamp de Inteligencia Artificial"
+                >
+                    <i class="fa-solid fa-brain"></i>
+                    Artificial Intelligence Bootcamp
+                </div>
+
+                <div
+                    class="home-cert-pill"
+                    data-en="SQL Complete Course"
+                    data-es="Curso Completo de SQL"
+                >
+                    <i class="fa-solid fa-database"></i>
+                    SQL Complete Course
+                </div>
+
+                <div
+                    class="home-cert-pill"
+                    data-en="Power BI Data Analysis"
+                    data-es="Análisis de Datos con Power BI"
+                >
+                    <i class="fa-solid fa-chart-column"></i>
+                    Power BI Data Analysis
+                </div>
+
+                <div
+                    class="home-cert-pill"
+                    data-en="Python Fundamentals"
+                    data-es="Fundamentos de Python"
+                >
+                    <i class="fa-brands fa-python"></i>
+                    Python Fundamentals
+                </div>
+
             </div>
+
             <div class="home-currently-learning">
-                <span class="currently-label">Currently learning:</span>
-                <span class="currently-items">SQL &amp; Data Modeling · Advanced Python · Software Architecture · React</span>
+
+                <span
+                    class="currently-label"
+                    data-en="Currently learning:"
+                    data-es="Aprendiendo actualmente:"
+                >
+                    Currently learning:
+                </span>
+
+                <span
+                    class="currently-items"
+                    data-en="Advanced SQL & Data Modeling · Python Automation · React · Software Architecture · AWS Fundamentals"
+                    data-es="SQL Avanzado y Modelado de Datos · Automatización con Python · React · Arquitectura de Software · Fundamentos de AWS"
+                >
+                    Advanced SQL &amp; Data Modeling ·
+                    Python Automation ·
+                    React ·
+                    Software Architecture ·
+                    AWS Fundamentals
+                </span>
+
             </div>
+
         </div>
+
     </section>
 
-    <script src="index.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
+```

@@ -9,141 +9,213 @@
 </head>
 <body>
 
-
+    <!-- HEADER -->
     <header class="header">
-        <a href="index.html" class="headerbtn">Home</a>
-        <a href="about.html" class="headerbtn">About</a>
-        <a href="projects.html" class="headerbtn active">Projects</a>
-        <a href="experience.html" class="headerbtn">Experience</a>
-        <a href="contact.html" class="headerbtn">Contact</a>
+
+        <a href="index.html" class="headerbtn" data-en="Home" data-es="Inicio">Home</a>
+
+        <a href="about.html" class="headerbtn" data-en="About Me" data-es="Sobre mí">About Me</a>
+
+        <a href="projects.html" class="headerbtn active" data-en="Projects" data-es="Proyectos">Projects</a>
+
+        <a href="experience.html" class="headerbtn" data-en="Experience" data-es="Experiencia">Experience</a>
+
+        <a href="contact.html" class="headerbtn" data-en="Contact" data-es="Contacto">Contact</a>
+
+        <button id="lang-toggle" class="lang-btn">ES</button>
+
     </header>
 
     <main class="projects-page">
 
         <!-- ── Page Title ── -->
         <section class="projects-hero">
-            <h1 class="title">Projects<span class="highlight">.</span></h1>
-            <p class="projects-subtitle">A selection of work spanning data analytics, automation, and web development.</p>
+            <h1 class="title">
+                <span data-en="Projects" data-es="Proyectos">Projects</span><span class="highlight">.</span>
+            </h1>
+            <p class="projects-subtitle" data-en="A selection of work spanning data analytics, automation, and web development." data-es="Una selección de trabajos en análisis de datos, automatización y desarrollo web.">
+                A selection of work spanning data analytics, automation, and web development.
+            </p>
         </section>
 
         <!-- ── Featured Projects ── -->
         <section class="projects-section">
-            <h2 class="section-label"><span class="highlight">★</span> Featured</h2>
+
+            <h2 class="section-label">
+                <span class="highlight">#</span> <span data-en="Featured" data-es="Destacados">Featured</span>
+            </h2>
 
             <div class="featured-grid">
 
-                <!-- Project 1 -->
-                <article class="project-card featured-card">
+                <!-- Sushi Festival -->
+                <article class="project-card">
                     <div class="project-card-header">
-                        <div class="project-screenshot placeholder-screenshot">
-                            <i class="fa-solid fa-chart-line placeholder-icon"></i>
-                            <span class="placeholder-label">Dashboard Preview</span>
-                        </div>
-                        <span class="project-badge">Power BI · SQL · Excel</span>
+                        <img src="Assets/sushi.png" alt="Sushi Festival Project" class="project-image">
+                        <span class="project-badge">JavaScript · CSS · HTML</span>
                     </div>
                     <div class="project-card-body">
-                        <h3 class="project-title">Walmart Fulfillment Incident Dashboard</h3>
-                        <p class="project-description">
-                            End-to-end BI dashboard tracking shipment delays, escalation trends,
-                            and resolution times across WFS operations. Reduced manual reporting
-                            time by automating KPI extraction from raw Excel exports into a live
-                            Power BI model.
+
+                        <h3 class="project-title" data-en="Sushi Festival Landing Page" data-es="Landing Page Festival de Sushi">
+                            Sushi Festival Landing Page
+                        </h3>
+
+                        <p class="project-description" data-en="Landing page for a sushi festival event with modern UI design, responsive structure, and interactive sections focused on user experience and visual presentation." data-es="Landing page para un evento de festival de sushi con diseño UI moderno, estructura responsiva y secciones interactivas enfocadas en la experiencia del usuario.">
+                            Landing page for a sushi festival event with modern UI design, responsive structure, and interactive sections focused on user experience and visual presentation.
                         </p>
+
                         <ul class="project-highlights">
-                            <li><i class="fa-solid fa-circle-check"></i> Tracked 500+ weekly incidents with real-time KPIs</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Identified top delay causes, cutting escalations by ~20%</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Automated weekly report generation, saving 3 hrs/week</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Responsive design optimized for multiple devices" data-es="Diseño responsivo optimizado para múltiples dispositivos">Responsive design optimized for multiple devices</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Structured frontend layout using semantic HTML" data-es="Estructura de frontend usando HTML semántico">Structured frontend layout using semantic HTML</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Interactive interface built with vanilla JavaScript" data-es="Interfaz interactiva construida con JavaScript puro">Interactive interface built with vanilla JavaScript</span></li>
                         </ul>
+
                         <div class="project-steps">
-                            <span class="step">Problem</span>
+                            <span class="step" data-en="Design" data-es="Diseño">Design</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Data Cleaning</span>
+                            <span class="step">JavaScript</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Dashboard Design</span>
+                            <span class="step">HTML</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Insights</span>
+                            <span class="step">CSS</span>
                         </div>
+
                         <div class="project-links">
-                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> View on GitHub
+                            <a href="https://festival-gastronomico-baq.netlify.app/" class="cta-btn filled" target="_blank">
+                                <i class="fa-solid fa-globe"></i>
+                                <span data-en="Live Website" data-es="Sitio en Vivo">Live Website</span>
+                            </a>
+                            <a href="https://github.com/melissagarridos/Festival-Gastronomico" class="cta-btn outline" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
                             </a>
                         </div>
+
                     </div>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Rock Band -->
                 <article class="project-card featured-card">
                     <div class="project-card-header">
-                        <div class="project-screenshot placeholder-screenshot">
-                            <i class="fa-brands fa-python placeholder-icon"></i>
-                            <span class="placeholder-label">Script Preview</span>
-                        </div>
-                        <span class="project-badge">Python · Pandas · SMTP · OpenPyXL</span>
+                        <img src="Assets/concert.jpg" alt="Rock Band Project" class="project-image">
+                        <span class="project-badge">JavaScript · CSS · HTML</span>
                     </div>
                     <div class="project-card-body">
-                        <h3 class="project-title">Settlement Report Automation Tool</h3>
-                        <p class="project-description">
-                            Python script that reads raw settlement spreadsheets, validates
-                            data integrity, generates formatted PDF reports, and dispatches
-                            them via email — fully replacing a manual weekly workflow.
+
+                        <h3 class="project-title" data-en="Rock Band Landing Page" data-es="Landing Page de Banda de Rock">
+                            Rock Band Landing Page
+                        </h3>
+
+                        <p class="project-description" data-en="Landing Page for a Rock Band Tour. Includes responsive design and UX UI Design." data-es="Landing Page para una gira de banda de rock. Incluye diseño responsivo y diseño UX/UI.">
+                            Landing Page for a Rock Band Tour. Includes responsive design and UX UI Design.
                         </p>
+
                         <ul class="project-highlights">
-                            <li><i class="fa-solid fa-circle-check"></i> Processes 1,000+ rows per report in under 10 seconds</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Catches data anomalies before reports reach stakeholders</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Eliminated manual report building entirely</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Responsive Design" data-es="Diseño Responsivo">Responsive Design</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="HTML structured website" data-es="Sitio web estructurado con HTML">HTML structured website</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Applied logical reasoning through programming" data-es="Razonamiento lógico aplicado a través de la programación">Applied logical reasoning through programming</span></li>
                         </ul>
+
                         <div class="project-steps">
-                            <span class="step">Read Sheets</span>
+                            <span class="step" data-en="Design" data-es="Diseño">Design</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Validate</span>
+                            <span class="step">JavaScript</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Generate Report</span>
+                            <span class="step">HTML</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Auto-send</span>
+                            <span class="step">CSS</span>
                         </div>
+
                         <div class="project-links">
-                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> View on GitHub
+                            <a href="https://github.com/melissagarridos/Rock-Band-Website" class="cta-btn filled" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-en="View on GitHub" data-es="Ver en GitHub">View on GitHub</span>
                             </a>
                         </div>
+
                     </div>
                 </article>
 
-                <!-- Project 3 -->
+                <!-- Geometric Calculator -->
                 <article class="project-card featured-card">
                     <div class="project-card-header">
-                        <div class="project-screenshot placeholder-screenshot">
-                            <i class="fa-solid fa-laptop-code placeholder-icon"></i>
-                            <span class="placeholder-label">App Preview</span>
-                        </div>
-                        <span class="project-badge">HTML · CSS · JavaScript</span>
+                        <img src="Assets/python.jpg" alt="Geometric Calculator Project" class="project-image">
+                        <span class="project-badge">Python · Logic · Math</span>
                     </div>
                     <div class="project-card-body">
-                        <h3 class="project-title">Developer Portfolio — This Site</h3>
-                        <p class="project-description">
-                            Fully hand-coded responsive portfolio with multi-page navigation,
-                            CSS animations, flip-card UI, contact form, and mobile-first layout.
-                            No frameworks — pure HTML, CSS, and JavaScript.
+
+                        <h3 class="project-title" data-en="Geometric Calculator" data-es="Calculadora Geométrica">
+                            Geometric Calculator
+                        </h3>
+
+                        <p class="project-description" data-en="Python-based calculator focused on geometric operations, formulas, and problem-solving logic. Built to strengthen programming fundamentals, reasoning, and algorithmic thinking." data-es="Calculadora en Python enfocada en operaciones geométricas, fórmulas y lógica de resolución de problemas. Construida para fortalecer los fundamentos de programación, razonamiento y pensamiento algorítmico.">
+                            Python-based calculator focused on geometric operations, formulas, and problem-solving logic. Built to strengthen programming fundamentals, reasoning, and algorithmic thinking.
                         </p>
+
                         <ul class="project-highlights">
-                            <li><i class="fa-solid fa-circle-check"></i> Responsive across all screen sizes</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Custom flip-card animations and CTA flow</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Clean component architecture across 5 pages</li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Calculates geometric areas, perimeters, and measurements" data-es="Calcula áreas, perímetros y medidas geométricas">Calculates geometric areas, perimeters, and measurements</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Reinforced Python fundamentals and coding structure" data-es="Reforzó los fundamentos de Python y la estructura del código">Reinforced Python fundamentals and coding structure</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Applied mathematical reasoning through programming" data-es="Razonamiento matemático aplicado a través de la programación">Applied mathematical reasoning through programming</span></li>
                         </ul>
+
                         <div class="project-steps">
-                            <span class="step">Design</span>
+                            <span class="step" data-en="Logic" data-es="Lógica">Logic</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Build</span>
+                            <span class="step">Python</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Responsive</span>
+                            <span class="step" data-en="Testing" data-es="Pruebas">Testing</span>
                             <i class="fa-solid fa-arrow-right step-arrow"></i>
-                            <span class="step">Deploy</span>
+                            <span class="step">CLI</span>
                         </div>
+
                         <div class="project-links">
-                            <a href="https://github.com/melissagarridos" class="cta-btn filled" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-github"></i> View on GitHub
+                            <a href="https://github.com/melissagarridos/Calculadora-Geometrica" class="cta-btn filled" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-en="View on GitHub" data-es="Ver en GitHub">View on GitHub</span>
                             </a>
                         </div>
+
+                    </div>
+                </article>
+
+                <!-- Terminal Souls -->
+                <article class="project-card featured-card">
+                    <div class="project-card-header">
+                        <img src="Assets/game.jpg" alt="Terminal Souls Project" class="project-image">
+                        <span class="project-badge">Python · Game Logic</span>
+                    </div>
+                    <div class="project-card-body">
+
+                        <h3 class="project-title" data-en="Terminal Souls" data-es="Terminal Souls">
+                            Terminal Souls
+                        </h3>
+
+                        <p class="project-description" data-en="Terminal-based fighting game developed in Python featuring multiple characters, combat rounds, and gameplay mechanics. Focused on logic flow, conditionals, and interactive gameplay." data-es="Juego de peleas en terminal desarrollado en Python con múltiples personajes, rondas de combate y mecánicas de juego. Enfocado en flujo lógico, condicionales y jugabilidad interactiva.">
+                            Terminal-based fighting game developed in Python featuring multiple characters, combat rounds, and gameplay mechanics. Focused on logic flow, conditionals, and interactive gameplay.
+                        </p>
+
+                        <ul class="project-highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Multi-character battle system with fighting rounds" data-es="Sistema de batalla multiPersonaje con rondas de combate">Multi-character battle system with fighting rounds</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Interactive terminal gameplay experience" data-es="Experiencia de juego interactiva en terminal">Interactive terminal gameplay experience</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span data-en="Built with object-oriented and gameplay logic concepts" data-es="Construido con conceptos de programación orientada a objetos y lógica de juego">Built with object-oriented and gameplay logic concepts</span></li>
+                        </ul>
+
+                        <div class="project-steps">
+                            <span class="step" data-en="Gameplay" data-es="Jugabilidad">Gameplay</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step" data-en="Combat Logic" data-es="Lógica de Combate">Combat Logic</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step">Python</span>
+                            <i class="fa-solid fa-arrow-right step-arrow"></i>
+                            <span class="step" data-en="Testing" data-es="Pruebas">Testing</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/melissagarridos/Terminal-Souls" class="cta-btn filled" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-en="View on GitHub" data-es="Ver en GitHub">View on GitHub</span>
+                            </a>
+                        </div>
+
                     </div>
                 </article>
 
@@ -152,75 +224,116 @@
 
         <!-- ── By Category ── -->
         <section class="projects-section">
-            <h2 class="section-label">By Category</h2>
+
+            <h2 class="section-label">
+                <span data-en="By Category" data-es="Por Categoría">By Category</span>
+            </h2>
 
             <div class="category-tabs">
-                <button class="cat-tab active" data-filter="all">All</button>
-                <button class="cat-tab" data-filter="data">Data Analytics</button>
-                <button class="cat-tab" data-filter="dev">Software Dev</button>
-                <button class="cat-tab" data-filter="automation">Automation</button>
+                <button class="cat-tab active" data-filter="all" data-en="All" data-es="Todos">All</button>
+                <button class="cat-tab" data-filter="frontend" data-en="Web Development" data-es="Desarrollo Web">Web Development</button>
+                <button class="cat-tab" data-filter="python" data-en="Python" data-es="Python">Python</button>
+                <button class="cat-tab" data-filter="data" data-en="Data Analytics" data-es="Analítica de Datos">Data Analytics</button>
+                <button class="cat-tab" data-filter="automation" data-en="Automation" data-es="Automatización">Automation</button>
             </div>
 
             <div class="mini-projects-grid" id="mini-grid">
 
-                <article class="mini-card" data-category="data">
-                    <div class="mini-card-icon"><i class="fa-solid fa-chart-bar"></i></div>
+                <!-- Festival -->
+                <article class="mini-card" data-category="frontend">
+                    <div class="mini-card-icon"><i class="fa-solid fa-utensils"></i></div>
                     <div class="mini-card-body">
-                        <h4>WFS Incident Tracker — Power BI</h4>
-                        <p>KPI dashboard for fulfillment incident management.</p>
-                        <div class="mini-tags"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
-                    </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                </article>
-
-                <article class="mini-card" data-category="data">
-                    <div class="mini-card-icon"><i class="fa-solid fa-file-excel"></i></div>
-                    <div class="mini-card-body">
-                        <h4>Loan Amortization Calculator</h4>
-                        <p>Excel model with payment simulation, charts, and interest analysis.</p>
-                        <div class="mini-tags"><span>Excel</span><span>Formulas</span><span>Charts</span></div>
-                    </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                </article>
-
-                <article class="mini-card" data-category="dev">
-                    <div class="mini-card-icon"><i class="fa-solid fa-list-check"></i></div>
-                    <div class="mini-card-body">
-                        <h4>Task Manager Web App</h4>
-                        <p>Filterable task tracker with local storage and clean UI.</p>
+                        <h4 data-en="Sushi Festival Landing Page" data-es="Landing Page Festival de Sushi">Sushi Festival Landing Page</h4>
+                        <p data-en="Modern responsive landing page for a gastronomic festival." data-es="Landing page responsiva moderna para un festival gastronómico.">Modern responsive landing page for a gastronomic festival.</p>
                         <div class="mini-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/melissagarridos/Festival-Gastronomico" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </article>
 
-                <article class="mini-card" data-category="automation">
-                    <div class="mini-card-icon"><i class="fa-brands fa-python"></i></div>
+                <!-- Portfolio -->
+                <article class="mini-card" data-category="frontend">
+                    <div class="mini-card-icon"><i class="fa-solid fa-briefcase"></i></div>
                     <div class="mini-card-body">
-                        <h4>Email Report Dispatcher</h4>
-                        <p>Python script that generates and emails weekly summary reports.</p>
-                        <div class="mini-tags"><span>Python</span><span>SMTP</span><span>Pandas</span></div>
+                        <h4 data-en="Professional Portfolio Landing Page" data-es="Landing Page de Portafolio Profesional">Professional Portfolio Landing Page</h4>
+                        <p data-en="Multi-page responsive portfolio built with HTML, CSS, and JavaScript featuring custom UI components, animations, and mobile-first design." data-es="Portafolio responsivo multi página construido con HTML, CSS y JavaScript con componentes UI personalizados, animaciones y diseño mobile-first.">Multi-page responsive portfolio built with HTML, CSS, and JavaScript featuring custom UI components, animations, and mobile-first design.</p>
+                        <div class="mini-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                     </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/melissagarridos/Personal-Portfolio" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </article>
 
+                <!-- Rock Band -->
+                <article class="mini-card" data-category="frontend">
+                    <div class="mini-card-icon"><i class="fa-solid fa-music"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Rock Band Website" data-es="Sitio Web de Banda de Rock">Rock Band Website</h4>
+                        <p data-en="Music-themed responsive website with modern visual design." data-es="Sitio web responsivo de temática musical con diseño visual moderno.">Music-themed responsive website with modern visual design.</p>
+                        <div class="mini-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos/Rock-Band-Website" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <!-- Calculator -->
+                <article class="mini-card" data-category="python">
+                    <div class="mini-card-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Geometric Calculator" data-es="Calculadora Geométrica">Geometric Calculator</h4>
+                        <p data-en="Python calculator for geometric formulas and measurements." data-es="Calculadora Python para fórmulas y medidas geométricas.">Python calculator for geometric formulas and measurements.</p>
+                        <div class="mini-tags"><span>Python</span><span>Logic</span><span>Math</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos/Calculadora-Geometrica" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <!-- Terminal Souls -->
+                <article class="mini-card" data-category="python">
+                    <div class="mini-card-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Terminal Souls" data-es="Terminal Souls">Terminal Souls</h4>
+                        <p data-en="Terminal fighting game built with Python combat logic." data-es="Juego de peleas en terminal construido con lógica de combate en Python.">Terminal fighting game built with Python combat logic.</p>
+                        <div class="mini-tags"><span>Python</span><span>Game Dev</span><span>CLI</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos/Terminal-Souls" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <!-- Inventory CRUD -->
+                <article class="mini-card" data-category="python">
+                    <div class="mini-card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Inventory CRUD" data-es="CRUD de Inventario">Inventory CRUD</h4>
+                        <p data-en="Python CRUD system for inventory and product management." data-es="Sistema CRUD en Python para gestión de inventario y productos.">Python CRUD system for inventory and product management.</p>
+                        <div class="mini-tags"><span>Python</span><span>CRUD</span><span>Data</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos/CRUD-Inventario" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <!-- Student CRUD -->
+                <article class="mini-card" data-category="python">
+                    <div class="mini-card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Students CRUD" data-es="CRUD de Estudiantes">Students CRUD</h4>
+                        <p data-en="Student management system using Python CRUD operations." data-es="Sistema de gestión de estudiantes con operaciones CRUD en Python.">Student management system using Python CRUD operations.</p>
+                        <div class="mini-tags"><span>Python</span><span>CRUD</span><span>CLI</span></div>
+                    </div>
+                    <a href="https://github.com/melissagarridos/CRUD-Estudiantes" class="mini-link" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </article>
+
+                <!-- Data Analytics Coming Soon -->
+                <article class="mini-card" data-category="data">
+                    <div class="mini-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="mini-card-body">
+                        <h4 data-en="Data Analytics Projects" data-es="Proyectos de Analítica de Datos">Data Analytics Projects</h4>
+                        <p data-en="Power BI dashboards, SQL analytics, KPI reporting, and operational insights coming soon." data-es="Dashboards en Power BI, análisis SQL, reportes KPI e insights operativos próximamente.">Power BI dashboards, SQL analytics, KPI reporting, and operational insights coming soon.</p>
+                        <div class="mini-tags"><span data-en="Coming Soon" data-es="Próximamente">Coming Soon</span></div>
+                    </div>
+                </article>
+
+                <!-- Automation Coming Soon -->
                 <article class="mini-card" data-category="automation">
                     <div class="mini-card-icon"><i class="fa-solid fa-gears"></i></div>
                     <div class="mini-card-body">
-                        <h4>Google Sheets Automation</h4>
-                        <p>Apps Script tools for auto-formatting and data validation workflows.</p>
-                        <div class="mini-tags"><span>Google Apps Script</span><span>JS</span></div>
+                        <h4 data-en="Automation Projects" data-es="Proyectos de Automatización">Automation Projects</h4>
+                        <p data-en="Python automation workflows, report generators, and productivity tools coming soon." data-es="Flujos de automatización con Python, generadores de reportes y herramientas de productividad próximamente.">Python automation workflows, report generators, and productivity tools coming soon.</p>
+                        <div class="mini-tags"><span data-en="Coming Soon" data-es="Próximamente">Coming Soon</span></div>
                     </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                </article>
-
-                <article class="mini-card" data-category="dev">
-                    <div class="mini-card-icon"><i class="fa-solid fa-database"></i></div>
-                    <div class="mini-card-body">
-                        <h4>SQL Sales Analysis</h4>
-                        <p>Query set analyzing sales trends, cohorts, and product performance.</p>
-                        <div class="mini-tags"><span>SQL</span><span>Data Analysis</span></div>
-                    </div>
-                    <a href="https://github.com/melissagarridos" class="mini-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
                 </article>
 
             </div>
@@ -228,24 +341,7 @@
 
     </main>
 
-    <script src="index.js"></script>
-    <script>
-        // Category filter
-        const tabs = document.querySelectorAll('.cat-tab');
-        const cards = document.querySelectorAll('.mini-card');
+<script src="index.js"></script>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const filter = tab.dataset.filter;
-                cards.forEach(card => {
-                    card.style.display =
-                        filter === 'all' || card.dataset.category === filter
-                            ? 'flex' : 'none';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
