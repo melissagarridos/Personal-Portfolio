@@ -36,7 +36,6 @@
 
 body {
   margin: 0;
-  padding-top: var(--header-height); /* always offset fixed header */
   color: var(--text);
   background: var(--bg);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -103,7 +102,12 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: calc(100dvh - var(--header-height));
+  padding-top: 10px;
   align-items: center;
+}
+
+.contact-page {
+  padding-top: var(--header-height);
 }
 
 .personal-information {
@@ -116,18 +120,19 @@ body {
 }
 
 .presentation {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .center-subtitle {
-  font-size: 15px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .main-title {
-  font-size: clamp(2rem, 4vw, 62px);
+  font-size: clamp(2rem, 7vw, 80px);
   font-weight: 1000;
   line-height: 1.05;
   text-shadow: var(--text-shadow);
@@ -139,19 +144,19 @@ body {
 }
 
 .index-description {
-  font-size: 12px;
+  font-size: 20px;
   color: var(--text);
   max-width: 520px;
 }
 
 .skill-box {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .skills {
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: var(--text-shadow);
   transition: transform 0.2s ease;
 }
@@ -175,7 +180,7 @@ body {
   gap: 8px;
   padding: 10px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -219,8 +224,8 @@ body {
 }
 
 .photo img {
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   object-fit: cover;
   padding: 30px;
@@ -251,10 +256,16 @@ body {
 
 
 /* ─── 5. ABOUT PAGE ──────────────────────────────────── */
+/* ─── 5. ABOUT PAGE ──────────────────────────────────── */
 .about-page {
   max-width: 1100px;
+  min-height: calc(100dvh - var(--header-height));
+
+  /* Better spacing */
+  padding: 80px 24px 60px;
+
+  /* Center container */
   margin: 0 auto;
-  padding: 60px 40px 100px;
 }
 
 /* Hero */
@@ -573,11 +584,6 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* About */
-  .about-page {
-    padding: 40px 24px 80px;
-  }
-
   .about-bio-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -636,7 +642,7 @@ textarea:focus {
 
   .presentation,
   .index-description {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .photo img {
@@ -662,7 +668,6 @@ textarea:focus {
   .title,
   .center-title {
     font-size: clamp(2rem, 10vw, 3.5rem);
-    margin-bottom: 16px;
   }
 
   /* Pets */
@@ -688,11 +693,6 @@ textarea:focus {
     max-width: 100%;
   }
 
-  /* About */
-  .about-page {
-    padding: 32px 16px 60px;
-  }
-
   #photo-code {
     height: 240px;
     border-radius: 12px;
@@ -701,6 +701,10 @@ textarea:focus {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
+  .center-subtitle {
+  font-size: 15px;
+}
 }
 
 /* ══════════════════════════════════════════════════════
@@ -736,7 +740,7 @@ textarea:focus {
 
   .presentation,
   .index-description {
-    font-size: 12px;
+    font-size: 20px;
   }
 
  .buttons {
@@ -777,6 +781,7 @@ textarea:focus {
 /* ══════════════════════════════════════════════════════
    11. HOME PAGE — SECTIONS (Projects, Experience, Certs)
    ══════════════════════════════════════════════════════ */
+
 
 .home-section {
   padding: 80px 0;
@@ -1057,6 +1062,8 @@ textarea:focus {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 40px 100px;
+  margin-top: 20px;
+
 }
 
 .projects-hero {
@@ -1681,36 +1688,6 @@ body {
   animation-delay: 0.1s;
 }
 
-.home-project-card:nth-child(1),
-.project-card:nth-child(1),
-.mini-card:nth-child(1),
-.skill-category:nth-child(1),
-.cert-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.home-project-card:nth-child(2),
-.project-card:nth-child(2),
-.mini-card:nth-child(2),
-.skill-category:nth-child(2),
-.cert-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.home-project-card:nth-child(3),
-.project-card:nth-child(3),
-.mini-card:nth-child(3),
-.skill-category:nth-child(3),
-.cert-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.home-project-card:nth-child(4),
-.project-card:nth-child(4),
-.mini-card:nth-child(4),
-.timeline-item:nth-child(4) {
-  animation-delay: 0.4s;
-}
 
 @keyframes fadeUp {
   from {
