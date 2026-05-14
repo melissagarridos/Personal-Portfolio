@@ -608,10 +608,6 @@ textarea:focus {
    ══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  :root {
-    --header-height: 110px; /* header wraps to ~2 rows */
-  }
-
   .header {
     height: auto;
     padding: 0.6rem 1rem;
@@ -620,11 +616,11 @@ textarea:focus {
     /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    margin-top: 100px;
   }
 
   .headerbtn {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   /* Home */
@@ -720,12 +716,12 @@ textarea:focus {
   }
 
   .header {
-    gap: 8px 14px;
+    gap: 10px;
   }
     /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    margin-top: 100px;
   }
 
   .headerbtn {
