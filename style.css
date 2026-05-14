@@ -102,8 +102,8 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: calc(100dvh - var(--header-height));
-  padding-top: 10px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .contact-page {
@@ -475,7 +475,6 @@ textarea:focus {
   grid-template-areas:
     "title"
     "cards";
-  min-height: 100vh;
   padding-bottom: 40px;
 }
 
@@ -559,7 +558,6 @@ textarea:focus {
   /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
 
   .personal-information {
