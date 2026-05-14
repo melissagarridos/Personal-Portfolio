@@ -103,7 +103,6 @@ body {
   grid-template-columns: 50% 50%;
   min-height: calc(100dvh - var(--header-height));
   align-items: center;
-  margin-top: 10px;
 }
 
 .contact-page {
@@ -558,6 +557,7 @@ textarea:focus {
   /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
+    min-height: calc(100dvh - var(--header-height));
   }
 
   .personal-information {
@@ -616,6 +616,11 @@ textarea:focus {
     height: auto;
     padding: 0.6rem 1rem;
     gap: 10px 20px;
+  }
+    /* Home: stack columns */
+  .layout {
+    grid-template-columns: 1fr;
+    padding-top: 100px;
   }
 
   .headerbtn {
@@ -716,6 +721,11 @@ textarea:focus {
 
   .header {
     gap: 8px 14px;
+  }
+    /* Home: stack columns */
+  .layout {
+    grid-template-columns: 1fr;
+    padding-top: 100px;
   }
 
   .headerbtn {
