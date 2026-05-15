@@ -101,13 +101,13 @@ body {
 /* ─── 3. HOME LAYOUT ─────────────────────────────────── */
 .layout {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   min-height: calc(100dvh - var(--header-height));
-  
-  align-items: center;     
-  justify-items: center;   
-
-  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+  padding: var(--header-height) 40px 40px;
 }
 
 .contact-page {
@@ -160,7 +160,7 @@ body {
 }
 
 .skills {
-  font-size: 15px;
+  font-size: 20px;
   text-shadow: var(--text-shadow);
   transition: transform 0.2s ease;
 }
@@ -556,10 +556,12 @@ textarea:focus {
     padding: 0.6rem 1rem;
     gap: 10px 20px;
   }
-    /* Home: stack columns */
+
+  /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    padding: 100px 20px 40px;
+    text-align: center;
   }
 
   .headerbtn {
@@ -591,8 +593,8 @@ textarea:focus {
   }
 
   .photo img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     padding: 16px;
   }
 
@@ -602,6 +604,7 @@ textarea:focus {
 
   .buttons {
     gap: 8px;
+    justify-content: center;
   }
 
   .cta-btn {
@@ -648,8 +651,41 @@ textarea:focus {
   }
 
   .center-subtitle {
-  font-size: 15px;
-}
+    font-size: 15px;
+  }
+
+  .home-section-inner,
+  .projects-page,
+  .exp-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section {
+    padding: 56px 0;
+  }
+
+  .home-section-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .about-bio-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ══════════════════════════════════════════════════════
@@ -664,10 +700,11 @@ textarea:focus {
   .header {
     gap: 10px;
   }
-    /* Home: stack columns */
+
+  /* Home: stack columns */
   .layout {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    padding: 140px 16px 32px;
   }
 
   .headerbtn {
@@ -683,34 +720,50 @@ textarea:focus {
     display: flex;
     text-align: center;
     align-items: center;
-    gap: 30px;
-    margin: 8px;
+    gap: 24px;
+    margin: 0;
     order: 2;
   }
 
   .main-title {
-    font-size: clamp(2rem, 8vw, 48px);
+    font-size: clamp(1.8rem, 8vw, 48px);
   }
 
   .presentation,
   .index-description {
-    font-size: 20px;
+    font-size: 14px;
   }
 
- .buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
   .photo img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     padding: 12px;
   }
 
   .skills {
     font-size: 20px;
+  }
+
+  .category-tabs {
+    gap: 6px;
+  }
+
+  .cat-tab {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  .home-cert-pill {
+    font-size: 0.8rem;
+    padding: 8px 14px;
   }
 
   /* Pets: single column */
@@ -728,6 +781,10 @@ textarea:focus {
   #photo-code {
     height: 200px;
     border-radius: 10px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1558,47 +1615,15 @@ textarea:focus {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .home-section-inner,
-  .projects-page,
-  .exp-page {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .home-projects-grid {
+  .about-bio-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .mini-projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-section {
-    padding: 56px 0;
-  }
-
-  .home-section-header {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .category-tabs {
-    gap: 6px;
-  }
-
-  .cat-tab {
-    padding: 6px 14px;
-    font-size: 0.78rem;
-  }
-
-  .home-cert-pill {
-    font-size: 0.8rem;
-    padding: 8px 14px;
+  .layout {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
