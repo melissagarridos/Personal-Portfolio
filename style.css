@@ -547,68 +547,6 @@ textarea:focus {
 
 
 /* ══════════════════════════════════════════════════════
-   8. RESPONSIVE — TABLET (≤ 1024px)
-   ══════════════════════════════════════════════════════ */
-@media (max-width: 1024px) {
-
-  .header {
-    gap: 24px;
-  }
-
-  .headerbtn {
-    font-size: 15px;
-  }
-
-  /* Home: stack columns */
-  .layout {
-    grid-template-columns: 1fr;
-    min-height: calc(100dvh - var(--header-height));
-  }
-
-  .personal-information {
-    display: flex;
-    gap: 5px;
-    margin: 5px;
-    order: 2;
-  }
-
-  .photo {
-    order: 1;
-    padding-top: 20px;
-  }
-
-  .photo img {
-    width: 250px;
-    height: 250px;
-  }
-
-  /* Pets: 2 columns */
-  .cardcontainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-bio-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .about-photo {
-    order: -1;
-  }
-
-  #photo-code {
-    height: 300px;
-    max-width: 100%;
-    border-radius: 16px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-/* ══════════════════════════════════════════════════════
    9. RESPONSIVE — MOBILE (≤ 768px)
    ══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
