@@ -103,9 +103,11 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   min-height: calc(100dvh - var(--header-height));
-  align-items: center;
-  padding-top: 100px;
+  
+  align-items: center;     
+  justify-items: center;   
 
+  padding-top: 100px;
 }
 
 .contact-page {
