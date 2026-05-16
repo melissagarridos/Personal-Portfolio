@@ -8,9 +8,13 @@
      5. About Page
      6. Contact Page
      7. Pets Page
-     8. Responsive — Tablet  (≤ 1024px)
-     9. Responsive — Mobile  (≤ 768px)
-    10. Responsive — Small   (≤ 480px)
+     8. Home Page — Sections (Projects, Experience, Certs)
+     9. Projects Page
+    10. Experience Page
+    11. Responsive — Large screens (≤ 1440px)
+    12. Responsive — Tablet  (≤ 1024px)
+    13. Responsive — Mobile  (≤  768px)
+    14. Responsive — Small   (≤  480px)
    ══════════════════════════════════════════════════════ */
 
 
@@ -39,6 +43,11 @@ body {
   color: var(--text);
   background: var(--bg);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: pageFade 0.8s ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
@@ -63,7 +72,7 @@ body {
 .headerbtn {
   color: var(--text);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   padding-bottom: 4px;
   transition: color 0.2s ease;
@@ -103,11 +112,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: calc(100dvh - var(--header-height));
-  max-width: 1200px;
+
   margin: 0 auto;
   align-items: center;
   justify-items: center;
-  padding: var(--header-height) 40px 40px;
 }
 
 .contact-page {
@@ -120,11 +128,10 @@ body {
   justify-content: center;
   gap: 29px;
   margin: 20px;
-  
 }
 
 .presentation {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .center-subtitle {
@@ -147,11 +154,6 @@ body {
   color: var(--primary);
 }
 
-.index-description {
-  font-size: 15px;
-  color: var(--text);
-  max-width: 520px;
-}
 
 .skill-box {
   display: flex;
@@ -160,7 +162,7 @@ body {
 }
 
 .skills {
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: var(--text-shadow);
   transition: transform 0.2s ease;
 }
@@ -169,8 +171,7 @@ body {
   transform: translateY(-2px);
 }
 
-
-/* CTA Buttons (LinkedIn, GitHub, Resume) */
+/* CTA Buttons */
 .buttons {
   display: flex;
   gap: 10px;
@@ -184,15 +185,13 @@ body {
   gap: 8px;
   padding: 10px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   cursor: pointer;
   white-space: nowrap;
 }
 
-/* Filled variant — primary actions */
 .cta-btn.filled {
   background: var(--primary);
   color: #fff;
@@ -202,11 +201,8 @@ body {
 .cta-btn.filled:hover {
   background: #6d28d9;
   border-color: #6d28d9;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
-/* Outlined variant — secondary actions */
 .cta-btn.outline {
   background: transparent;
   color: var(--primary);
@@ -216,8 +212,6 @@ body {
 .cta-btn.outline:hover {
   background: var(--primary);
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
 /* Photo column */
@@ -234,12 +228,9 @@ body {
   object-fit: cover;
   padding: 30px;
   border: 2px solid #e8d5ff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .photo img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(181, 127, 228, 0.35);
   border-color: var(--primary-light);
 }
 
@@ -260,19 +251,13 @@ body {
 
 
 /* ─── 5. ABOUT PAGE ──────────────────────────────────── */
-/* ─── 5. ABOUT PAGE ──────────────────────────────────── */
 .about-page {
   max-width: 1100px;
   min-height: calc(100dvh - var(--header-height));
-
-  /* Better spacing */
   padding: 80px 24px 60px;
-
-  /* Center container */
   margin: 0 auto;
 }
 
-/* Hero */
 .about-hero {
   margin-bottom: 56px;
 }
@@ -281,7 +266,6 @@ body {
   margin: 0;
 }
 
-/* Bio + Photo two-column grid */
 .about-bio-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -322,7 +306,6 @@ body {
   box-shadow: var(--hover-shadow);
 }
 
-/* Skills section */
 .about-skills-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: bold;
@@ -341,12 +324,6 @@ body {
   border: 1px solid #ede9fe;
   border-radius: 14px;
   padding: 28px 24px;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-}
-
-.skill-category:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
 }
 
 .skill-cat-title {
@@ -546,254 +523,7 @@ textarea:focus {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   9. RESPONSIVE — MOBILE (≤ 768px)
-   ══════════════════════════════════════════════════════ */
-@media (max-width: 768px) {
-
-  .header {
-    height: auto;
-    padding: 0.6rem 1rem;
-    gap: 10px 20px;
-  }
-
-  /* Home: stack columns */
-  .layout {
-    grid-template-columns: 1fr;
-    padding: 100px 20px 40px;
-    text-align: center;
-  }
-
-  .headerbtn {
-    font-size: 15px;
-  }
-  .lang-btn {
-    font-size: 15px;
-  }
-
-  /* Home */
-  .personal-information {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    gap: 30px;
-    margin: 8px;
-    order: 2;
-  }
-
-  .main-title {
-    font-size: clamp(2rem, 8vw, 5rem);
-    font-weight: bold;
-    text-shadow: var(--text-shadow);
-  }
-
-  .presentation,
-  .index-description {
-    font-size: 15px;
-  }
-
-  .photo img {
-    width: 300px;
-    height: 300px;
-    padding: 16px;
-  }
-
-  .skills {
-    font-size: 20px;
-  }
-
-  .buttons {
-    gap: 8px;
-    justify-content: center;
-  }
-
-  .cta-btn {
-    padding: 9px 16px;
-    font-size: 10px;
-  }
-
-  /* Titles */
-  .title,
-  .center-title {
-    font-size: clamp(2rem, 10vw, 3.5rem);
-  }
-
-  /* Pets */
-  .cardcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .petcard {
-    width: 100%;
-    max-width: 260px;
-    height: 320px;
-  }
-
-  /* Contact */
-  #form {
-    padding: 20px 10px;
-    align-items: flex-start;
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
-
-  #photo-code {
-    height: 240px;
-    border-radius: 12px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .center-subtitle {
-    font-size: 15px;
-  }
-
-  .home-section-inner,
-  .projects-page,
-  .exp-page {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .home-projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mini-projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-section {
-    padding: 56px 0;
-  }
-
-  .home-section-header {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .about-bio-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ══════════════════════════════════════════════════════
-   10. RESPONSIVE — SMALL PHONES (≤ 480px)
-   ══════════════════════════════════════════════════════ */
-@media (max-width: 480px) {
-
-  :root {
-    --header-height: 130px;
-  }
-
-  .header {
-    gap: 10px;
-  }
-
-  /* Home: stack columns */
-  .layout {
-    grid-template-columns: 1fr;
-    padding: 140px 16px 32px;
-  }
-
-  .headerbtn {
-    font-size: 12px;
-  }
-
-  .lang-btn {
-    font-size: 12px;
-  }
-
-  /* Home */
-  .personal-information {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    gap: 24px;
-    margin: 0;
-    order: 2;
-  }
-
-  .main-title {
-    font-size: clamp(1.8rem, 8vw, 48px);
-  }
-
-  .presentation,
-  .index-description {
-    font-size: 14px;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .photo img {
-    width: 220px;
-    height: 220px;
-    padding: 12px;
-  }
-
-  .skills {
-    font-size: 20px;
-  }
-
-  .category-tabs {
-    gap: 6px;
-  }
-
-  .cat-tab {
-    padding: 6px 14px;
-    font-size: 0.78rem;
-  }
-
-  .home-cert-pill {
-    font-size: 0.8rem;
-    padding: 8px 14px;
-  }
-
-  /* Pets: single column */
-  .cardcontainer {
-    grid-template-columns: 1fr;
-  }
-
-  .petcard {
-    width: 100%;
-    max-width: 320px;
-    height: 360px;
-  }
-
-  /* About */
-  #photo-code {
-    height: 200px;
-    border-radius: 10px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ══════════════════════════════════════════════════════
-   11. HOME PAGE — SECTIONS (Projects, Experience, Certs)
-   ══════════════════════════════════════════════════════ */
-
-
+/* ─── 8. HOME PAGE — SECTIONS ────────────────────────── */
 .home-section {
   padding: 80px 0;
 }
@@ -839,7 +569,6 @@ textarea:focus {
   gap: 10px;
 }
 
-/* ── Home Project Cards ── */
 .home-projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -854,12 +583,6 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.home-project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
 }
 
 .project-image {
@@ -872,11 +595,6 @@ textarea:focus {
   display: block;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image {
-  transform: scale(1.03);
 }
 
 .hpc-top {
@@ -953,7 +671,6 @@ textarea:focus {
   gap: 10px;
 }
 
-/* ── Experience Snapshot ── */
 .exp-snapshot {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -1015,7 +732,6 @@ textarea:focus {
   background: var(--primary);
 }
 
-/* ── Certs Row ── */
 .home-certs-row {
   display: flex;
   gap: 12px;
@@ -1034,16 +750,10 @@ textarea:focus {
   font-size: 0.88rem;
   font-weight: 500;
   color: #444;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .home-cert-pill i {
   color: var(--primary);
-}
-
-.home-cert-pill:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
 }
 
 .home-currently-learning {
@@ -1065,16 +775,12 @@ textarea:focus {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   12. PROJECTS PAGE
-   ══════════════════════════════════════════════════════ */
-
+/* ─── 9. PROJECTS PAGE ───────────────────────────────── */
 .projects-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 40px 100px;
   margin-top: 20px;
-
 }
 
 .projects-hero {
@@ -1107,7 +813,6 @@ textarea:focus {
   gap: 8px;
 }
 
-/* Featured grid: 1 card wide on first, 2 below */
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1115,7 +820,7 @@ textarea:focus {
 }
 
 .featured-grid .featured-card:first-child {
-  grid-column: 1 / -1; /* first card spans full width */
+  grid-column: 1 / -1;
 }
 
 .project-card {
@@ -1123,12 +828,6 @@ textarea:focus {
   border: 1px solid #ede9fe;
   border-radius: 18px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--hover-shadow);
 }
 
 .project-card-header {
@@ -1158,7 +857,6 @@ textarea:focus {
   color: #b8a9e0;
 }
 
-/* Wide first card gets taller screenshot */
 .featured-card:first-child .placeholder-screenshot {
   height: 240px;
 }
@@ -1247,7 +945,6 @@ textarea:focus {
   margin-top: 4px;
 }
 
-/* Mini project cards (category grid) */
 .category-tabs {
   display: flex;
   gap: 8px;
@@ -1288,12 +985,6 @@ textarea:focus {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.mini-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
 }
 
 .mini-card-icon {
@@ -1355,10 +1046,7 @@ textarea:focus {
 }
 
 
-/* ══════════════════════════════════════════════════════
-   13. EXPERIENCE PAGE
-   ══════════════════════════════════════════════════════ */
-
+/* ─── 10. EXPERIENCE PAGE ────────────────────────────── */
 .exp-page {
   max-width: 900px;
   margin: 0 auto;
@@ -1377,7 +1065,6 @@ textarea:focus {
   margin-bottom: 64px;
 }
 
-/* Timeline */
 .timeline {
   position: relative;
   padding-left: 32px;
@@ -1480,7 +1167,6 @@ textarea:focus {
   font-weight: 600;
 }
 
-/* Certs grid */
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1495,12 +1181,6 @@ textarea:focus {
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
 }
 
 .cert-icon {
@@ -1554,7 +1234,6 @@ textarea:focus {
   color: #ca8a04;
 }
 
-/* Currently Learning row */
 .learning-grid {
   display: flex;
   gap: 12px;
@@ -1572,7 +1251,6 @@ textarea:focus {
   font-size: 0.9rem;
   font-weight: 500;
   color: #444;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .learning-item i {
@@ -1580,19 +1258,190 @@ textarea:focus {
   font-size: 1rem;
 }
 
-.learning-item:hover {
-  transform: translateY(-2px);
+
+/* ══════════════════════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════════════════════ */
+@keyframes pageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes floatImage {
+  0%   { transform: translateY(0px);  }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px);  }
+}
+
+.personal-information,
+.home-project-card,
+.project-card,
+.mini-card,
+.skill-category,
+.cert-card,
+.learning-item,
+.exp-snapshot,
+.timeline-item {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.photo {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.8s ease forwards 0.1s;
+}
+
+.photo img {
+  animation:
+    fadeUp 1s ease forwards,
+    floatImage 5s ease-in-out 1s infinite;
+}
+
+/* Hover transitions */
+.skills,
+.cta-btn,
+.home-project-card,
+.project-card,
+.mini-card,
+.skill-category,
+.cert-card,
+.learning-item,
+.home-cert-pill,
+.photo img,
+.project-image {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+.home-project-card:hover,
+.project-card:hover,
+.mini-card:hover,
+.skill-category:hover,
+.cert-card:hover,
+.learning-item:hover,
+.home-cert-pill:hover,
+.photo img:hover {
+  transform: translateY(-6px);
   box-shadow: var(--shadow);
+}
+
+.skills:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 
 /* ══════════════════════════════════════════════════════
-   14. RESPONSIVE ADDITIONS for new sections
+   11. RESPONSIVE — LARGE SCREENS (≤ 1440px)
    ══════════════════════════════════════════════════════ */
+@media (max-width: 1440px) {
 
+  .layout {
+    padding: 140px 10px 10px;
+  }
+
+  .photo img {
+    width: 360px;
+    height: 360px;
+  }
+
+  .home-section-inner {
+    max-width: 1000px;
+    padding: 0 48px;
+  }
+
+  .about-page,
+  .projects-page {
+    max-width: 1000px;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════
+   12. RESPONSIVE — TABLET (≤ 1024px)
+   ══════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
+
+  /* Header */
+  .header {
+    gap: 28px;
+  }
+
+  .headerbtn {
+    font-size: 14px;
+  }
+
+  /* Home: keep two columns, tighten spacing */
+  .layout {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding: 140px 10px 10px;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .personal-information {
+    gap: 22px;
+    margin: 0;
+  }
+
+  .main-title {
+    font-size: clamp(1.8rem, 4.5vw, 48px);
+  }
+
+  .photo img {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+  }
+
+  /* Home sections */
+  .home-section-inner {
+    padding: 0 32px;
+  }
+
   .home-projects-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .exp-snapshot {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Projects page */
+  .projects-page {
+    padding: 60px 32px 80px;
   }
 
   .featured-grid {
@@ -1607,157 +1456,271 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* About page */
+  .about-page {
+    padding: 80px 32px 60px;
+  }
+
+  .about-bio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Experience page */
+  .exp-page {
+    padding: 60px 32px 80px;
+  }
+
   .certs-grid {
     grid-template-columns: 1fr;
   }
 
-  .exp-snapshot {
+  /* Pets: 3 columns on tablet */
+  .cardcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .petcard {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════
+   13. RESPONSIVE — MOBILE (≤ 768px)
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    height: auto;
+    padding: 0.6rem 1rem;
+    gap: 10px 20px;
+  }
+
+  .headerbtn,
+  .lang-btn {
+    font-size: 13px;
+  }
+
+  /* Home: stack photo above text */
+  .layout {
     grid-template-columns: 1fr;
+    padding: 140px 10px 10px;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .personal-information {
+    text-align: center;
+    align-items: center;
     gap: 20px;
+    margin: 0;
+    order: 2;
+  }
+
+  .photo {
+    order: 1;
+  }
+
+  .photo img {
+    width: 240px;
+    height: 240px;
+    padding: 16px;
+  }
+
+  .main-title {
+    font-size: clamp(2rem, 8vw, 5rem);
+  }
+
+
+
+  .skills {
+    font-size: 20px;
+  }
+
+  .buttons {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .cta-btn {
+    padding: 9px 16px;
+    font-size: 10px;
+  }
+
+  /* Shared titles */
+  .title,
+  .center-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  /* Home sections */
+  .home-section {
+    padding: 56px 0;
+  }
+
+  .home-section-inner,
+  .projects-page,
+  .exp-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .home-section-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .home-projects-grid,
+  .mini-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About */
+  .about-page {
+    padding: 80px 20px 48px;
   }
 
   .about-bio-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
-  .layout {
-    padding-left: 24px;
-    padding-right: 24px;
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  #photo-code {
+    height: 240px;
+    border-radius: 12px;
+  }
+
+  /* Contact */
+  #form {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  /* Pets */
+  .cardcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .petcard {
+    width: 100%;
+    max-width: 260px;
+    height: 320px;
+  }
+
+  /* Experience */
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .center-subtitle {
+    font-size: 15px;
   }
 }
+
 
 /* ══════════════════════════════════════════════════════
-   SUBTLE PORTFOLIO ANIMATIONS
-   Replace ONLY animation-related sections with this
+   14. RESPONSIVE — SMALL PHONES (≤ 480px)
    ══════════════════════════════════════════════════════ */
-
-/* ─── Smooth Page Fade ─────────────────────────────── */
-body {
-  animation: pageFade 0.8s ease;
-}
-
-@keyframes pageFade {
-  from {
-    opacity: 0;
+@media (max-width: 480px) {
+ 
+  :root {
+    --header-height: 130px;
   }
-  to {
-    opacity: 1;
+ 
+  /* Header */
+  .header {
+    gap: 10px;
   }
-}
-
-/* ─── Gentle Upward Entrance Animation ────────────── */
-.personal-information,
-.photo,
-.home-project-card,
-.project-card,
-.mini-card,
-.skill-category,
-.cert-card,
-.learning-item,
-.exp-snapshot,
-.timeline-item {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-/* Staggered entrance */
-.photo {
-  animation-delay: 0.1s;
-}
-
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
+ 
+  .headerbtn,
+  .lang-btn {
+    font-size: 12px;
   }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+ 
+  /* Home */
+  .layout {
+    padding: 140px 16px 32px;
   }
-}
-
-/* ─── Softer Hover Animations ─────────────────────── */
-.skills,
-.cta-btn,
-.home-project-card,
-.project-card,
-.mini-card,
-.skill-category,
-.cert-card,
-.learning-item,
-.photo img,
-.project-image {
-  transition:
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease,
-    color 0.35s ease;
-}
-
-/* Gentle hover lift */
-.home-project-card:hover,
-.project-card:hover,
-.mini-card:hover,
-.skill-category:hover,
-.cert-card:hover,
-.learning-item:hover,
-.photo img:hover {
-  transform: translateY(-6px);
-}
-
-/* Skill icon floating */
-.skills:hover {
-  transform: translateY(-4px) scale(1.05);
-}
-
-/* Buttons */
-.cta-btn:hover {
-  transform: translateY(-3px);
-}
-
-/* Project image subtle zoom */
-.project-card:hover .project-image {
-  transform: scale(1.04);
-}
-
-/* ─── Floating Profile Image ──────────────────────── */
-.photo img {
-  animation:
-    fadeUp 1s ease forwards,
-    floatImage 5s ease-in-out infinite;
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0px);
+ 
+  .personal-information {
+    gap: 18px;
   }
-
-  50% {
-    transform: translateY(-8px);
+ 
+  .main-title {
+    font-size: clamp(1.8rem, 8vw, 48px);
   }
-
-  100% {
-    transform: translateY(0px);
+ 
+  .presentation,
+  .index-description {
+    font-size: 14px;
   }
-}
-
-/* ─── Smooth Scroll ───────────────────────────────── */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ─── Reduce Motion Accessibility ─────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+ 
+  .photo img {
+    width: 200px;
+    height: 200px;
+    padding: 12px;
+  }
+ 
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+ 
+  /* About */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  #photo-code {
+    height: 200px;
+    border-radius: 10px;
+  }
+ 
+  /* Projects */
+  .category-tabs {
+    gap: 6px;
+  }
+ 
+  .cat-tab {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+ 
+  /* Certs */
+  .home-cert-pill {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+ 
+  /* Pets */
+  .cardcontainer {
+    grid-template-columns: 1fr;
+  }
+ 
+  .petcard {
+    width: 100%;
+    max-width: 320px;
+    height: 360px;
   }
 }
